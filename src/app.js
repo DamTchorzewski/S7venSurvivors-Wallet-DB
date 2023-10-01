@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors"); 
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const app = express();
@@ -8,6 +9,8 @@ const transactionsRouter = require("./routes/transactions");
 
 app.use(express.json());
 require("./config/passport");
+
+app.use(cors());
 
 const options = {
   definition: {
