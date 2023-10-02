@@ -34,7 +34,7 @@ const signUp = async (req, res) => {
   }
 };
 
-const logIn = async (req, res) => {
+const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
@@ -125,7 +125,7 @@ const aboutUser = async (req, res) => {
 
 module.exports = {
   signUp,
-  logIn,
+  login,
   logOut,
   aboutUser,
 };

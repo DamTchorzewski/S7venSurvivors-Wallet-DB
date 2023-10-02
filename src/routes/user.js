@@ -7,7 +7,7 @@ const userTask = require("../controllers/user.controllers");
 
 router.post("/signup", validation(signupSchema), userTask.signUp);
 
-router.post("/login", validation(loginSchema), userTask.logIn);
+router.post("/login", validation(loginSchema), userTask.login);
 
 router.get("/logout", auth, userTask.logOut);
 
